@@ -77,20 +77,20 @@ app.use(
   })
 );
 
-// MongoDB bağlantılı Session ayarları
+const secret = process.env.SECRET || "thisshouldbeabettersecret!";
+
+// MongoDB bağlantılı Session ayarları. Lokalde sessionların tutulmamasını sağlar.
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   touchAfter: 24 * 60 * 60,
-  crypto: {
-    secret: "thisshouldbeabettersecret!",
-  },
+  secret,
 });
 
 // Sunucuda çalışan Session ayarları
 const sessionConfig = {
   store,
   name: "session",
-  secret: "thisshouldbeabettersecret",
+  secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
