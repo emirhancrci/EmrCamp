@@ -5,7 +5,7 @@ const map = new mapboxgl.Map({
   container: "cluster-map",
   // Mapbox için hazırlanmış conteiner ın stil ayarlarının yapıldığı yer.
   style: "mapbox://styles/mapbox/light-v10",
-  center: [-103.5917, 40.6699],
+  center: [26.337812, 39.488006],
   zoom: 3,
 });
 
