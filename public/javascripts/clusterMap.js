@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
   // Mapbox için hazırlanmış conteiner ın stil ayarlarının yapıldığı yer.
   style: "mapbox://styles/mapbox/light-v10",
   center: [26.337812, 39.488006],
-  zoom: 3,
+  zoom: 5,
 });
 
 const nav = new mapboxgl.NavigationControl();
