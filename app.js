@@ -27,7 +27,7 @@ const reviewsRoutes = require("./routes/reviews.js");
 
 // .env MongoDB bağlantı değişkeni
 //const dbUrl = process.env.DB_URL;
-const dbUrl = "mongodb://127.0.0.1:27017/emr-camp";
+const dbUrl =  process.env.DB_URL || "mongodb://127.0.0.1:27017/emr-camp";
 
 // Mongoose ile MongoDB veritabanına bağlandı.
 // LOCAL ADRESS "mongodb://127.0.0.1:27017/emr-camp"
