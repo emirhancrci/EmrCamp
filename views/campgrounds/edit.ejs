@@ -1,0 +1,57 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="row">
+  <h1 class="text-center">Kamp Alanını Düzenle</h1>
+  <div class="col-6 offset-3">
+    <form action="/campgrounds/<%=campground._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">İsim</label>
+        <!-- req.body kısmında name attribute u kullanılır. campground başlığı altında toplar. -->
+        <input class="form-control" type="text" id="title" name="campground[title]" value="<%=campground.title %>" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Konum</label>
+        <input class="form-control" type="text" id="location" name="campground[location]" value="<%=campground.location %>" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="price">Kamp Alanı Ücreti</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">₺</span>
+          <input value="<%=campground.price %>" id="price" type="text" class="form-control" name="campground[price]" placeholder="0.00" aria-label="price" aria-describedby="price-label" required />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Açıklama</label>
+        <textarea class="form-control" type="text" id="description" name="campground[description]" required><%=campground.description %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="image">Resim Yükle</label>
+        <div class="form-file custom-file">
+          <input type="file" class="form-file-input" id="image" name="image" multiple />
+          <label class="form-file-label" for="image">
+            <span class="form-file-text custom-file-label">Daha fazla resim ekle...</span>
+            <span class="form-file-button">Ekle</span>
+          </label>
+        </div>
+      </div>
+      <!-- Silinmesi için seçilen checkboxlar ile resimler alındı. 
+       deleteImages bir array olarak req body içerisine gönderildi. -->
+      <div class="mb-3">
+        <% campground.images.forEach(function (img,i) {%>
+
+        <img class="img-thumbnail" src="<%=img.thumbnail %>" alt="" />
+        <div class="form-check-inline">
+          <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>" />
+        </div>
+        <label for="image-<%=i%>">Delete ?</label>
+
+        <% }) %>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Kamp Yerini Güncelle</button>
+      </div>
+    </form>
+    <a href="/campgrounds/<%= campground._id %>">Geri Dön</a>
+  </div>
+</div>
