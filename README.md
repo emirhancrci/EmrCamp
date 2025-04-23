@@ -1,7 +1,7 @@
 [ENG](#--emrcamp---campground)
 
 ---
-# EmrCamp - Kamp Alanı Uygulaması
+# 🇹🇷 • EmrCamp - Kamp Alanı Uygulaması
 
 ## Amaç
 + Kamp tutkunları için geliştirilen EmrCamp, kullanıcıların deneyimlerini paylaştığı etkileşimli bir platformdur. Kullanıcılar kamp alanlarının konumlarını haritada işaretleyebilir, görseller, fiyatlar ve yorumlar gibi detayları ekleyerek diğer gezginler için hızlı ve kolay bir rehber oluşturabilirler.
