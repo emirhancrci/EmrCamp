@@ -61,9 +61,7 @@
 ## Lisans ![GitHub License](https://img.shields.io/github/license/emirhancrci/EmrCamp)
 **EmrCamp**, tüm varlıkları ve kodları [MIT Lisansı](https://github.com/emirhancrci/EmrCamp/blob/main/LICENSE) altındadır. 
 
-
-## sayfa
-
+---
 
 # 🇺🇸 • EmrCamp - Campground
 
