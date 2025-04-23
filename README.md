@@ -1,4 +1,4 @@
-[ENG](#🇺🇸 • EmrCamp - Campground)
+[ENG](#--emrcamp---campground)
 
 ---
 # EmrCamp - Kamp Alanı Uygulaması
