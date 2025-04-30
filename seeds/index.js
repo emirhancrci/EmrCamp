@@ -6,7 +6,7 @@ const Campground = require("../models/campground.js");
 
 // Mongoose ile MongoDB veritabanına bağlandık.
 mongoose
-  .connect("mongodb://127.0.0.1:27017/emr-camp")
+  .connect(process.env.DB_URL)
   .then(() => {
     console.log("Veritabanina baglandi.");
   })
@@ -18,8 +18,8 @@ const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 300; i++) {
-    const random1000 = Math.floor(Math.random() * 1000);
+  for (let i = 0; i < 50; i++) {
+    const random1000 = Math.floor(Math.random() * 100);
     const price = Math.floor(Math.random() * 20) + 10;
     const camp = new Campground({
       author: "6776a57598092adbc7f8774a",
